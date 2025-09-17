@@ -1,0 +1,35 @@
+use("mall")
+
+db.createCollection("orders",{
+    validator:{
+        $jsonSchema:{
+            bsonType: "object",
+            required:["order_id", "customer_id"],
+            properties:{
+                order_id:{
+                    bsonType: "int"
+                },
+                customer_id:{
+                    bsonType: "int"
+                },
+                product:{
+                    bsonType: "array",
+                    items:{
+                        bsonType: "object",
+                        properties:{
+                            product_id:{
+                                bsonType: "int"
+                            },
+                            name:{
+                                bsonType: "string"
+                            },
+                            price:{
+                                bsonType: "number"
+                            }
+                        }
+                    }
+                }
+            }
+        }            
+    }
+})

@@ -1,0 +1,44 @@
+use("mall")
+
+db.createCollection("users",{
+
+    validator:{
+        $jsonSchema:{
+            bsonType:"Object",
+            properties:{
+                name:{
+                    bsonType: "string"
+
+                },
+                address:{
+                    bsonType: "object",
+                    properties:{
+                        street:{
+                            bsonType: "string"
+                        },
+                        city:{
+                            bsonType: "string"
+                        },
+                        zip:{
+                            bsonType: "number"
+                        }
+                    }
+                },
+                shipping:{
+                    bsonType: "object",
+                    properties:{
+                        street:{
+                            bsonType: "string"
+                        },
+                        city:{
+                            bsonType: "string"
+                        },
+                        zip:{
+                            bsonType: "number"
+                        }
+                    }
+                }
+            }
+        }
+    }
+})

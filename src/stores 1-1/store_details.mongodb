@@ -1,0 +1,29 @@
+use("store")
+
+db.createCollection("store_details", {
+    validator:{
+        $jsonSchema:{
+            bsonType: "object",
+            required: ["store_id", "name", "address"],
+            properties:{
+                store_id: {
+                    bsonType: "string"
+                },
+                description:{
+                    bsonType: "string"
+                },
+                manager:{
+                    bsonType: "object",
+                    properties:{
+                        name:{
+                            bsonType: "string"
+                        },
+                        phone:{
+                            bsonType: "number"
+                        }
+                    }
+                }
+            } 
+        }
+    }
+})

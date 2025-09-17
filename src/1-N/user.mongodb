@@ -1,0 +1,11 @@
+use("mall")
+
+db.cretaeCollection("users", {
+    validator:{
+        $jsonSchema:{
+            bsonType: "object",
+            required: ["user_id"],
+            
+        }
+    }
+})

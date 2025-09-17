@@ -1,0 +1,3 @@
+use("mall")
+
+db.users.find({"shipping.city": "Springfield"})

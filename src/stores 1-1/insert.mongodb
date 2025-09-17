@@ -1,0 +1,16 @@
+use("store")
+
+db.stores.insertOne({
+    store_id: "ST007",
+    name: "mattel",
+    address: "123 main st"
+})
+
+db.store_details.insertOne({
+    store_id: "ST007",
+    description: "sede principal de mattel",
+    manager:{
+        name: "juan perez",
+        phone: 1234567890
+    }
+})

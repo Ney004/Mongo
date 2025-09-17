@@ -1,0 +1,30 @@
+use("mall")
+
+db.users.insertOne([
+    {
+        name: "Juan Perez",
+        address: {
+            street: "Calle Falsa 123",
+            city: "Springfield",
+            zip: 12345
+        },
+        shipping: {
+            street: "Avenida Siempre Viva 742",
+            city: "Springfield",
+            zip: 12345
+        }
+    },
+    {
+        name: "Maria Gomez",
+        address: {
+            street: "Calle Falsa 13434",
+            city: "Detroit",
+            zip: 1255
+        },
+        shipping: {
+            street: "Avenida Siempre Viva 7567",
+            city: "Springfield",
+            zip: 12345
+        }
+    }
+])

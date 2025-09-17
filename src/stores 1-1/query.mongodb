@@ -1,0 +1,4 @@
+use("store")
+
+db.store.findOne({store_id: "ST007"})
+db.store_details.findOne({store_id: "ST007"})
