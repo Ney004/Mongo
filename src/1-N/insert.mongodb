@@ -1,0 +1,15 @@
+use("mall")
+
+db.order.insertOne({
+    customer_id: ObjectId("64b8f0f5f1d2c8e4b5a6c7d8"),
+    product:[
+        {
+            name: "portatil",
+            price: 10000
+        },
+        {
+            name: "mouse",
+            price: 80000
+        }
+    ]
+})
